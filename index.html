@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AsOne</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link href="css/font-awesome.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<!-- Login page start -->
+		<div data-role="page" id="login-page" >
+			<div data-role="header" data-theme="c" class="login-head-bg" data-id="logo" >
+				<div class="cross-strip">
+					<p><img src="images/AsOne-Logo-Login.png"  />
+					</p>
+				</div>
+			</div>
+			<div data-role="content" class="marg-top-50px">
+				<h3 class="sign-head">sign in to as-one es</h3>
+				<form id="login-form" class="mrg-30px">
+					<span class="input-pre-icon"><i class="fa fa-envelope"></i></span>
+					<input type="text" name="email" placeholder="Enter Email" />
+					<span class="input-pre-icon"><i class="fa fa-key"></i></span>
+					<input type="text" name="password" placeholder="Password" />
+					<!--<input type="submit" data-role="button"  data-theme="a" value="Login"/>-->
+					<a href="#home-page" class="login-submit-btn" data-role="button" data-transition="slide" >Login</a>
+				</form>
+			</div>
+			<div data-role="footer" class="footer" data-position="fixed">
+				<h4>© 2014 CNSI. All rights reserved.</h4>
+			</div>
+		</div>
+		<!-- Login page end -->
+
+		<!-- Home page start -->
+		<div data-role="page" id="home-page" >
+
+			<div data-role="header" >
+
+				<a href="#setting_panel"  data-role="button"  class="back-btn"><i class="fa fa-list"></i></a>
+				<h4>Home</h4>
+				<a href="#login-page" data-role="button" class="ui-btn-right back-btn" data-direction="reverse" data-transition="slide" ><i class="fa fa-sign-out"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#myPendingTask-page" data-transition="slide">My Pending Tasks</a>
+					</li>
+					<li>
+						<a href="#myEvents-page" data-transition="slide">My Events</a>
+					</li>
+					<li>
+						<a href="#" data-transition="slide">My Check-out Items</a>
+					</li>
+					<li>
+						<a href="#" data-transition="slide">My Work Products</a>
+					</li>
+					<li>
+						<a href="#" data-transition="slide">Recently Added Items</a>
+					</li>
+					<li>
+						<a href="#" data-transition="slide">Recently Modified Items</a>
+					</li>
+					
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+			<div data-role="panel" id="setting_panel" data-position-fixed="true">
+				<div class="fixed-scroll">
+
+					<ul data-role="listview">
+						<li>
+							<a href="#home-page" data-transition="slide"><i class="fa fa-home"></i> Home</a>
+						</li>
+						<li>
+							<a href="#" data-transition="slide"><i class="fa fa-cogs"></i> Settings</a>
+						</li>
+						<li>
+							<a href="#login-page" data-transition="slide"><i class="fa fa-sign-out"></i> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Home page end -->
+
+		<!-- portal page start -->
+		<div data-role="page" id="myPendingTask-page" >
+
+			<div data-role="header" >
+				<h4>My Pending Tasks</h4>
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+
+					<li>
+						<a href="#dueThisWeek-page" data-transition="slide">Due This Week</a>
+					</li>
+
+					<li>
+						<a href="#overdueItem-page" data-transition="slide">Overdue Items</a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+
+		<!-- portal page start -->
+		<div data-role="page" id="dueThisWeek-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>Due This Week</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#actions-page" data-transition="slide">Actions <span class="badge">3</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Risk <span class="badge">2</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Discrepancies <span class="badge">5</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Work Products <span class="badge">2</span></a>
+					</li>
+					
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+		<!-- portal page start -->
+		<div data-role="page" id="overdueItem-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>Overdue Items</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#overdue-actions-page" data-transition="slide">Actions <span class="badge">2</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Risk <span class="badge">2</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Discrepancies <span class="badge">5</span></a>
+					</li>
+
+					<li>
+						<a href="#" data-transition="slide">Work Products <span class="badge">2</span></a>
+					</li>
+					
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+		
+		
+		<!-- portal page start -->
+		<div data-role="page" id="actions-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>Actions</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-015</a>
+					</li>
+
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-025</a>
+					</li>
+
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-027</a>
+					</li>
+
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+		<!-- portal page start -->
+		<div data-role="page" id="overdue-actions-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>Actions</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#overdue-actions-details-page" data-transition="slide">AI-P-ASONE-01</a>
+					</li>
+
+					<li>
+						<a href="#overdue-actions-details-page" data-transition="slide">AI-P-ASONE-02</a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+		
+		
+		<!-- portal page1 start -->
+		<div data-role="page" id="actions-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>Actions</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-015</a>
+					</li>
+
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-025</a>
+					</li>
+
+					<li>
+						<a href="#actions-details-page" data-transition="slide">AI-P-ASONE-027</a>
+					</li>
+
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page1 end -->
+		
+		
+		
+		<!-- portal page start -->
+		<div data-role="page" id="myEvents-page" >
+
+			<div data-role="header" >
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" >Back</a>
+				<h4>My Events</h4>				
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content">
+				<div data-role="collapsible" class="bor-1px-ccc" data-collapsed="false"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<h4>Tue Sep-16-2014</h4>
+					<ul data-role="listview" data-inset="false">
+						<li>
+							<a href="#events-details-page"  data-transition="slide" >17.30 - As-One Weekly Meeting</a>
+							
+						</li>
+					</ul>
+
+				</div>
+				<div data-role="collapsible" class="bor-1px-ccc" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<h4>Fri Sep-19-2014</h4>
+					<ul data-role="listview" data-inset="false">
+						<li>
+							<a href="#events-details2-page" data-transition="slide" >18.30 - All Hands Meeting</a>
+							
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- portal page end -->
+
+		<!-- Detail page start -->
+		<div data-role="page" id="actions-details-page" >
+
+			<div data-role="header">
+				
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Actions Details</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							Project:
+						</p>
+						<p class="font-bold">
+							As-One
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Number:
+						</p>
+						<p class="font-bold">
+							AI-P-ASONE-015
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Title:
+						</p>
+						<p class="font-bold">
+							Review Release Notes
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Primary Assignee:
+						</p>
+						<p class="font-bold">
+							Kunnath, Jinesh
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Due Date:
+						</p>
+						<p class="font-bold">
+							09/20/2014
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Priority:
+						</p>
+						<p class="font-bold">
+							High
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Escalation
+						</p>
+						<p class="font-bold">
+							Not Escalated
+						</p>
+					</li>					
+
+					<li class="bg-white">
+						<p>
+							Status:
+						</p>
+						<p class="font-bold">
+							Open
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Attachments:
+						</p>
+						<p class="font-bold">
+							<a href="#attach-detail-page" data-transition="slide" data-role="button" >As-One_Release_Notes.pdf </a>
+						</p>
+					
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- Detail page end -->
+		
+		<!-- Detail page start -->
+		<div data-role="page" id="events-details-page" >
+
+			<div data-role="header">
+				
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Events Details</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							Project:
+						</p>
+						<p class="font-bold">
+							As-One
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Event Name:
+						</p>
+						<p class="font-bold">
+							As-One Weekly Meeting
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Called By:
+						</p>
+						<p class="font-bold">
+							Kunnath, Jinesh
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Event Date:
+						</p>
+						<p class="font-bold">
+							Sep-16-2014
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Event Time:
+						</p>
+						<p class="font-bold">
+							17:30 IST
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Location:
+						</p>
+						<p class="font-bold">
+							CTI -Earth
+						</p>
+					</li>
+					
+					<li class="bg-white">
+						<p>
+							Attachments:
+						</p>
+						<p class="font-bold">
+							<a href="#event-attach-detail-page" data-transition="slide" data-role="button" >ASONE_WEEKLY_MEETING_MOM.pdf </a>
+						</p>
+						
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- Detail page end -->
+		
+		<!-- Detail page1 start -->
+		<div data-role="page" id="events-details2-page" >
+
+			<div data-role="header">
+				
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Events Details</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							Project:
+						</p>
+						<p class="font-bold">
+							As-One
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Event Name:
+						</p>
+						<p class="font-bold">
+							All Hands Meeting
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Called By:
+						</p>
+						<p class="font-bold">
+							Kunnath, Jinesh
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Event Date:
+						</p>
+						<p class="font-bold">
+							Sep-19-2014
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Event Time:
+						</p>
+						<p class="font-bold">
+							18.30 IST
+						</p>
+					</li>
+					
+					
+					<li class="bg-white">
+						<p>
+							Location:
+						</p>
+						<p class="font-bold">
+							CTI -Earth
+						</p>
+					</li>
+					
+					<li class="bg-white">
+						<p>
+							Attachments:
+						</p>
+						
+						
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- Detail page end -->
+		
+		
+		
+		
+		<!-- Detail page start -->
+		<div data-role="page" id="overdue-actions-details-page" >
+
+			<div data-role="header">
+				
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Actions Details</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							Project:
+						</p>
+						<p class="font-bold">
+							As-One
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Number:
+						</p>
+						<p class="font-bold">
+							AI-P-ASONE-01
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Title:
+						</p>
+						<p class="font-bold">
+							Review Release Notes
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Primary Assignee:
+						</p>
+						<p class="font-bold">
+							Kunnath, Jinesh
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Due Date:
+						</p>
+						<p class="font-bold">
+							9/10/2014
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Priority:
+						</p>
+						<p class="font-bold">
+							High
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Escalation
+						</p>
+						<p class="font-bold">
+							Not Escalated
+						</p>
+					</li>					
+
+					<li class="bg-white">
+						<p>
+							Status:
+						</p>
+						<p class="font-bold">
+							Open
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Attachments:
+						</p>
+						<p class="font-bold">
+							<a href="#attach-detail-page" data-transition="slide" data-role="button" >As-One_Release_Notes.pdf </a>
+						</p>
+						
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- Detail page end -->
+
+		<!-- attach Detail page start -->
+		<div data-role="page" id="attach-detail-page" >
+
+			<div data-role="header">
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Attachment</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							File Name:
+						</p>
+						<p class="font-bold">
+							As-One_Release_Notes.pdf
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Version No.:
+						</p>
+						<p class="font-bold">
+							3
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Type
+						</p>
+						<p class="font-bold">
+							pdf
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Size(MB)
+						</p>
+						<p class="font-bold">
+							.34 MB
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Uploaded By:
+						</p>
+						<p class="font-bold">
+							Thangavelu, Mirunalni
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Date:
+						</p>
+						<p class="font-bold">
+							09/02/2014
+						</p>
+					</li>
+				</ul>
+
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!--attach  Detail page end -->
+
+		
+		
+			<!-- attach Detail page start -->
+		<div data-role="page" id="event-attach-detail-page" >
+
+			<div data-role="header">
+				<a href="#" data-rel="back" data-role="button" class="back-btn" data-direction="reverse" data-transition="slide" ><span>Back</span></a>
+				<h4>Attachment</h4>
+				<a href="#home-page"  data-role="button" data-transition="slide" class="back-btn"><i class="fa fa-home"></i></a>
+			</div>
+			<div data-role="content" class="pad-none">
+				<ul data-role="listview">
+					<li class="bg-white">
+						<p>
+							File Name:
+						</p>
+						<p class="font-bold">
+							AS-ONE_WEEKLY_MEETING_MOM.pdf
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Version No.:
+						</p>
+						<p class="font-bold">
+							1
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Type
+						</p>
+						<p class="font-bold">
+							pdf
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Size(MB)
+						</p>
+						<p class="font-bold">
+							.34 MB
+						</p>
+					</li>
+
+					<li class="bg-white">
+						<p>
+							Uploaded By:
+						</p>
+						<p class="font-bold">
+							Thangavelu, Mirunalni
+						</p>
+					</li>
+					<li class="bg-white">
+						<p>
+							Date:
+						</p>
+						<p class="font-bold">
+							09/16/2014
+						</p>
+					</li>
+				</ul>
+
+			</div>
+			<div data-role="footer" data-position="fixed" >
+				<div class="cross-strip">
+					© 2014 CNSI. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!--attach  Detail page end -->
+
+		
+		
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
